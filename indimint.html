@@ -14,6 +14,8 @@
             font-family: 'Roboto', sans-serif;
             background-color: #1a202c;
             color: #e2e8f0;
+            margin: 0;
+            padding: 0;
         }
         .hero-image {
             position: relative;
@@ -42,11 +44,17 @@
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.5s, transform 0.5s;
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
         .animate-on-scroll.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+        .section-padding {
+            padding: 4rem 0;
+        }
+        .bg-dark {
+            background-color: #2d3748;
         }
     </style>
 </head>
@@ -75,7 +83,7 @@
             </div>
         </section>
 
-        <section id="features" class="py-16 bg-gray-900">
+        <section id="features" class="section-padding bg-dark">
             <div class="container mx-auto px-4">
                 <h3 class="text-3xl font-bold mb-8 text-center">Localization Algorithm</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -98,7 +106,7 @@
             </div>
         </section>
 
-        <section id="technology" class="py-16">
+        <section id="technology" class="section-padding">
             <div class="container mx-auto px-4">
                 <h3 class="text-3xl font-bold mb-8 text-center">Our Technology</h3>
                 <div class="flex flex-col md:flex-row items-center">
@@ -113,7 +121,7 @@
             </div>
         </section>
 
-        <section id="use-cases" class="py-16 bg-gray-900">
+        <section id="use-cases" class="section-padding bg-dark">
             <div class="container mx-auto px-4">
                 <h3 class="text-3xl font-bold mb-8 text-center">Use Cases</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -137,7 +145,7 @@
             </div>
         </section>
 
-        <section id="testimonials" class="py-16">
+        <section id="testimonials" class="section-padding">
             <div class="container mx-auto px-4">
                 <h3 class="text-3xl font-bold mb-8 text-center">Testimonials</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -164,30 +172,27 @@
                 <nav>
                     <ul class="flex space-x-4">
                         <li><a href="#" class="hover:text-blue-400">About Us</a></li>
-                        <li><a href="#" class="hover:text-blue-400">Contact</a></li>
                         <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Contact</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="mt-8 text-center">
-                <p>&copy; 2024 EchoGuard. All rights reserved.</p>
-            </div>
+            <p class="text-center text-sm mt-4">© 2024 EchoGuard. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.utils.toArray('.animate-on-scroll').forEach((element) => {
-            gsap.from(element, {
-                y: 50,
-                opacity: 0,
-                duration: 1,
+        gsap.utils.toArray('.animate-on-scroll').forEach(section => {
+            gsap.fromTo(section, { opacity: 0, y: 20 }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
                 scrollTrigger: {
-                    trigger: element,
+                    trigger: section,
                     start: 'top 80%',
-                    end: 'bottom 20%',
+                    end: 'bottom top',
                     toggleActions: 'play none none reverse'
                 }
             });
