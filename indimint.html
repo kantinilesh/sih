@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoGuard - Real-Time Gunshot Detection and Localization</title>
+    <meta name="description" content="EchoGuard provides cutting-edge FPGA-based real-time gunshot detection and localization technology for enhanced public safety.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+        .hero-image {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-image video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+        }
+        .feature-icon {
+            font-size: 2rem;
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-gray-800 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">EchoGuard</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#features" class="hover:text-blue-400">Localization Algorithm</a></li>
+                    <li><a href="#technology" class="hover:text-blue-400">Technology</a></li>
+                    <li><a href="#use-cases" class="hover:text-blue-400">Use Cases</a></li>
+                    <li><a href="#testimonials" class="hover:text-blue-400">Testimonials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-image">
+            <video src="Military Stock Footage Free - Army Stock Footage | Military War Stock Video | No Copyright  Free.mp4" autoplay muted loop></video>
+            <div class="hero-content container mx-auto px-4">
+                <h2 class="text-5xl font-bold mb-4">Real-Time Gunshot Detection and Localization</h2>
+                <p class="text-xl mb-8">Enhance public safety with cutting-edge FPGA technology</p>
+                <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Learn More</a>
+            </div>
+        </section>
+
+        <section id="features" class="py-16 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold mb-8 text-center">Localization Algorithm</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="animate-on-scroll text-center">
+                        <div class="feature-icon mb-4">🔍</div>
+                        <h4 class="text-xl font-bold mb-2">Algorithm Overview</h4>
+                        <p>Detailed explanation of our localization algorithm used for detecting and pinpointing gunshots in real-time.</p>
+                    </div>
+                    <div class="animate-on-scroll text-center">
+                        <div class="feature-icon mb-4">🧩</div>
+                        <h4 class="text-xl font-bold mb-2">Data Fusion</h4>
+                        <p>Integration of multiple data sources for accurate detection and localization.</p>
+                    </div>
+                    <div class="animate-on-scroll text-center">
+                        <div class="feature-icon mb-4">📊</div>
+                        <h4 class="text-xl font-bold mb-2">Real-Time Processing</h4>
+                        <p>High-speed processing of audio signals to ensure timely and reliable results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology" class="py-16">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold mb-8 text-center">Our Technology</h3>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="/api/placeholder/600/400" alt="FPGA Technology Diagram" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <p class="mb-4">EchoGuard utilizes state-of-the-art FPGA-based architecture for real-time signal processing and analysis. Our proprietary algorithms can distinguish between gunshots and similar sounds, even in noisy urban environments.</p>
+                        <p>The system processes audio inputs from multiple microphones, using advanced time-difference-of-arrival (TDOA) techniques to accurately localize the source of gunshots in 3D space.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="use-cases" class="py-16 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold mb-8 text-center">Use Cases</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="animate-on-scroll">
+                        <h4 class="text-xl font-bold mb-2">Urban Areas</h4>
+                        <p>Enhance city-wide security and emergency response times in densely populated areas.</p>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <h4 class="text-xl font-bold mb-2">Educational Institutions</h4>
+                        <p>Protect students and staff with rapid detection and notification systems in schools and universities.</p>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <h4 class="text-xl font-bold mb-2">Public Spaces</h4>
+                        <p>Improve safety in parks, stadiums, and other large gatherings with real-time monitoring.</p>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <h4 class="text-xl font-bold mb-2">Critical Infrastructure</h4>
+                        <p>Secure power plants, government buildings, and other sensitive locations with advanced threat detection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-16">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold mb-8 text-center">Testimonials</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <p class="mb-4">"EchoGuard has revolutionized our city's emergency response capabilities. The accuracy and speed of detection have been instrumental in improving public safety."</p>
+                        <p class="font-bold">- John Doe, Chief of Police</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <p class="mb-4">"As a school administrator, I feel more confident knowing we have EchoGuard's technology protecting our students and staff. It's an essential part of our security infrastructure."</p>
+                        <p class="font-bold">- Jane Smith, School Principal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h4 class="text-xl font-bold mb-2">EchoGuard</h4>
+                    <p>Enhancing public safety through innovation</p>
+                </div>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><a href="#" class="hover:text-blue-400">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 EchoGuard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray('.animate-on-scroll').forEach((element) => {
+            gsap.from(element, {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        });
+    </script>
+</body>
+</html>
